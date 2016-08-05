@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-class App extends Component {
+class App extends Component {	
 	render() {
-		return <div>This is react app..</div>
+		return <div>Welcome to a react app...</div>
 	}
 }
 
