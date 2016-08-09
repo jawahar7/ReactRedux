@@ -1,6 +1,6 @@
-const TaskReducer = function(state = [], action) {
+let TaskReducer = function(state = [], action) {
 	switch (action.type) {
-		case 'TASK_ADD':			
+		case 'ADD_TODO':			
 			return [...state, {id: action.id, task: action.text}] 
 			break;
 		default:
