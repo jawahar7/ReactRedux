@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import TaskAdd from '../actions/TaskAdd';
 
 class TextInput extends Component{	
 	constructor(props){
@@ -17,7 +16,8 @@ class TextInput extends Component{
 
 	handleSubmit(event){
 		event.preventDefault();		
-		this.props.TaskAdd(this.state.inputText);
+		this.props.addTodo(this.state.inputText);
+		//this.props.TaskAdd(this.state.inputText);
 		this.setState({
 			inputText: ''
 		})
@@ -33,8 +33,4 @@ class TextInput extends Component{
 	}
 }
 
-function mapDispatchToProps(dispatch) {		
-	return bindActionCreators({TaskAdd: TaskAdd.addtodo}, dispatch);
-}
-
-export default connect(null, mapDispatchToProps)(TextInput);
+export default TextInput;
