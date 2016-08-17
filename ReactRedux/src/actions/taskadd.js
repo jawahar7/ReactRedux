@@ -1,10 +1,16 @@
 let nextTodoId = 0
 let TaskAdd = {
 	addtodo(text) {
-		return{
+		return {
 			type: 'ADD_TODO',
 			id: nextTodoId++,
 			text
+		}
+	},
+	deletetodo(index) {
+		return {
+			type: 'DELETE_TODO',
+			index
 		}
 	}
 }

@@ -11,7 +11,7 @@ class App extends Component {
 			<div>
 				<h2>Todo List</h2>
 				<TextInput addTodo={this.props.action.addtodo}/>
-				<TodoList />
+				<TodoList deleteTodo={this.props.action.deletetodo} />
 			</div>
 		)
 	}
@@ -19,7 +19,7 @@ class App extends Component {
 
 function mapDispatchToProps(dispatch){
 	return {
-		action: bindActionCreators(TaskAdd, dispatch)
+		action: bindActionCreators(TaskAdd, dispatch)		
 	}
 }
 
