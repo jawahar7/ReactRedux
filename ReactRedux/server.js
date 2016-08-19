@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 	res.sendFile(path.resolve('client/index.html'));
 });
 
-app.listen('3000', function(err){
+app.listen('3001', function(err){
 	if(err)
 		console.log(err);
 	else
